@@ -1,0 +1,587 @@
+/* ==========================================================================
+   SIGON SOUND PRODUCTION - PREMIUM HEADER STYLES
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 14px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 12px 22px;
+  margin-bottom: 24px;
+  background: rgba(12, 14, 18, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  box-shadow: 0 12px 36px -8px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(215, 166, 74, 0.06);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.site-header.scrolled {
+  background: rgba(8, 9, 12, 0.92);
+  border-color: rgba(215, 166, 74, 0.2);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.75), 0 0 24px -4px rgba(215, 166, 74, 0.12);
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+/* --------------------------------------------------------------------------
+   BRAND LOGO
+   -------------------------------------------------------------------------- */
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.brand-wrap:hover {
+  transform: translateY(-1px);
+}
+
+.brand-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: block;
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(215, 166, 74, 0.2));
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.brand-wrap:hover .brand-mark {
+  filter: drop-shadow(0 0 14px rgba(215, 166, 74, 0.55));
+  transform: scale(1.04);
+}
+
+.brand-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1px;
+}
+
+.brand-type {
+  display: block;
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
+}
+
+.brand-subtext {
+  font-size: 0.56rem;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+  color: #d7a64a;
+  text-transform: uppercase;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   DESKTOP NAVIGATION
+   -------------------------------------------------------------------------- */
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 999px;
+  gap: 2px;
+}
+
+.nav-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  color: #cfd3dc;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  color: #f5d58d;
+  background: rgba(215, 166, 74, 0.12);
+  border: 1px solid rgba(215, 166, 74, 0.25);
+  box-shadow: 0 0 14px rgba(215, 166, 74, 0.15);
+  font-weight: 600;
+}
+
+.nav-active-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #f5d58d;
+  box-shadow: 0 0 8px #d7a64a;
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+    box-shadow: 0 0 12px #f5d58d;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SOUND EQUALIZER ANIMATION
+   -------------------------------------------------------------------------- */
+.soundwave-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 14px;
+  padding: 0 2px;
+}
+
+.soundwave-bars .bar {
+  width: 2.5px;
+  background: linear-gradient(to top, #d7a64a, #f5d58d);
+  border-radius: 2px;
+  animation: soundwave 1.2s ease-in-out infinite alternate;
+}
+
+.soundwave-bars .bar-1 {
+  height: 40%;
+  animation-delay: 0.1s;
+}
+
+.soundwave-bars .bar-2 {
+  height: 90%;
+  animation-delay: 0.35s;
+}
+
+.soundwave-bars .bar-3 {
+  height: 60%;
+  animation-delay: 0.2s;
+}
+
+.soundwave-bars .bar-4 {
+  height: 80%;
+  animation-delay: 0.45s;
+}
+
+@keyframes soundwave {
+  0% {
+    height: 25%;
+    opacity: 0.6;
+  }
+
+  50% {
+    height: 100%;
+    opacity: 1;
+  }
+
+  100% {
+    height: 40%;
+    opacity: 0.7;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   HEADER ACTIONS & CTA BUTTON
+   -------------------------------------------------------------------------- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header-cta-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #0c0d10;
+  background: linear-gradient(135deg, #d7a64a 0%, #f5d58d 100%);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(215, 166, 74, 0.28);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.header-cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent);
+  transition: left 0.6s ease;
+}
+
+.header-cta-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(215, 166, 74, 0.45);
+  color: #050608;
+}
+
+.header-cta-btn:hover::before {
+  left: 100%;
+}
+
+.header-cta-btn:hover .cta-arrow {
+  transform: translateX(3px);
+}
+
+.cta-arrow {
+  transition: transform 0.25s ease;
+}
+
+/* --------------------------------------------------------------------------
+   HAMBURGER TOGGLE BUTTON
+   -------------------------------------------------------------------------- */
+.mobile-toggle-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.mobile-toggle-btn:hover {
+  background: rgba(215, 166, 74, 0.12);
+  border-color: rgba(215, 166, 74, 0.3);
+}
+
+.hamburger-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-origin: center;
+}
+
+.mobile-toggle-btn.open .line-1 {
+  transform: translateY(7px) rotate(45deg);
+  background: #f5d58d;
+}
+
+.mobile-toggle-btn.open .line-2 {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-toggle-btn.open .line-3 {
+  transform: translateY(-7px) rotate(-45deg);
+  background: #f5d58d;
+}
+
+/* --------------------------------------------------------------------------
+   MOBILE BACKDROP & DRAWER
+   -------------------------------------------------------------------------- */
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 98;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(340px, 86vw);
+  z-index: 99;
+  background: rgba(10, 11, 15, 0.96);
+  border-left: 1px solid rgba(215, 166, 74, 0.18);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.8);
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+}
+
+.mobile-menu-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-menu-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 28px 24px;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.mobile-brand-preview {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mobile-brand-mark {
+  height: 28px;
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(215, 166, 74, 0.4));
+}
+
+.mobile-brand-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #f3f4f6;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  color: #cfd3dc;
+  text-decoration: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-item:hover,
+.mobile-nav-item.active {
+  background: rgba(215, 166, 74, 0.1);
+  border-color: rgba(215, 166, 74, 0.22);
+  color: #f5d58d;
+  transform: translateX(4px);
+}
+
+.mobile-item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-item-index {
+  font-size: 0.72rem;
+  font-family: monospace;
+  color: #d7a64a;
+  opacity: 0.8;
+}
+
+.mobile-item-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mobile-item-arrow {
+  opacity: 0.5;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-nav-item:hover .mobile-item-arrow,
+.mobile-nav-item.active .mobile-item-arrow {
+  opacity: 1;
+  transform: translateX(2px);
+  color: #f5d58d;
+}
+
+.mobile-drawer-footer {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mobile-cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  background: linear-gradient(135deg, #d7a64a 0%, #f5d58d 100%);
+  color: #0b0c0e;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(215, 166, 74, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.mobile-cta-btn:active {
+  transform: scale(0.98);
+}
+
+.mobile-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-contact-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8e95a5;
+  margin-bottom: 2px;
+}
+
+.mobile-contact-link {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mobile-contact-link:hover {
+  color: #f5d58d;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 980px) {
+  .site-nav {
+    display: none;
+  }
+
+  .mobile-toggle-btn {
+    display: flex;
+  }
+
+  .site-header {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    top: 8px;
+    padding: 10px 14px;
+    border-radius: 14px;
+  }
+
+  .brand-logo-group {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    height: 32px;
+  }
+
+  .brand-type {
+    height: 18px;
+  }
+
+  .brand-subtext {
+    font-size: 0.5rem;
+    letter-spacing: 0.18em;
+  }
+
+  .header-cta-btn {
+    padding: 7px 14px;
+    font-size: 0.76rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-cta-btn {
+    display: none;
+  }
+}
