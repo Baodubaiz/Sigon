@@ -1,5 +1,5 @@
 import heroImg from '../assets/images/studio/Mix room.jpg'
-import showreelVideo from '../assets/videos/Bản sao của SHOWREEL 2025.mp4'
+import { Showreel } from '../sections/Showreel/Showreel'
 import { Link } from 'react-router-dom'
 import { awards } from '../data/awards'
 import { projects } from '../data/projects'
@@ -162,19 +162,7 @@ function HomePage() {
                 </div>
             </section>
 
-            <section className="showreel-section">
-                <div className="section-heading left-aligned">
-                    <p className="eyebrow">SHOWREEL</p>
-                    <h2>Showreel 2025</h2>
-                </div>
-
-                <div className="video-card">
-                    <video controls preload="metadata" poster={heroImg}>
-                        <source src={showreelVideo} type="video/mp4" />
-                        Your browser does not support HTML5 video.
-                    </video>
-                </div>
-            </section>
+            <Showreel />
 
             <section className="projects-section">
                 <div className="section-heading centered-heading">
